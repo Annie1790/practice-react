@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Annie1790/practice-react/static/css/main.d440c34b.css",
+    "main.js": "/Annie1790/practice-react/static/js/main.9f3bd7b7.js",
+    "index.html": "/Annie1790/practice-react/index.html",
+    "main.d440c34b.css.map": "/Annie1790/practice-react/static/css/main.d440c34b.css.map",
+    "main.9f3bd7b7.js.map": "/Annie1790/practice-react/static/js/main.9f3bd7b7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d440c34b.css",
+    "static/js/main.9f3bd7b7.js"
+  ]
+}
