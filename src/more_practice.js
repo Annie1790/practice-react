@@ -1,5 +1,17 @@
 import { useState } from "react";
 
+const WelcomeMessage = ({ firstName, lastName }) => {
+    return (
+        <p>Welcome {firstName} {lastName}</p>
+    )
+};
+
+const ErrorMessage = () => {
+    return (
+        <p>Fields can't be empty!</p>
+    )
+};
+
 const App = () => {
     const [showFormValid, setShowFormValid] = useState(false);
     const [showFormInvalid, setShowFormInvalid] = useState(false);
@@ -7,12 +19,6 @@ const App = () => {
         firstName: "",
         lastName: ""
     })
-
-    const ErrorMessage = () => {
-        return (
-            <p>Fields can't be empty!</p>
-        )
-    };
 
     const resetValidity = () => {
         setShowFormValid(false);
@@ -36,7 +42,7 @@ const App = () => {
         setName({
             //spread operator
             ...name,
-            firstName: event.target.value,
+            firstName: event.target.value.trim(),
         })
     };
 
@@ -44,7 +50,7 @@ const App = () => {
         resetValidity()
         setName({
             ...name,
-            lastName: event.target.value,
+            lastName: event.target.value.trim(),
         })
     }
 
@@ -66,7 +72,7 @@ const App = () => {
                 <button type="submit">Submit</button>
             </form>
             <div>
-                {showFormValid && <p>Welcome {name.firstName} {name.lastName}</p>}
+                {showFormValid && <WelcomeMessage firstName={name.firstName} lastName={name.lastName}></WelcomeMessage>}
                 {showFormInvalid && <ErrorMessage></ErrorMessage>}
             </div>
         </div>
