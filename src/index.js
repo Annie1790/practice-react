@@ -1,12 +1,12 @@
 import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./another_practice.css";
+import "./more_practice.css";
 
-import Board from "./another_practice.js";
+import App from "./more_practice.js";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
   <StrictMode>
-    <Board />
+    <App />
   </StrictMode>
 );
